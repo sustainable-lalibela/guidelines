@@ -34,7 +34,3 @@ mkdocs serve
 ```Bash
 mkdocs build
 ```
-
-## Documentation
-
-- MkDocs Youtube Tutorial: [https://www.youtube.com/watch?v=Q-YA_dA8C20]()
