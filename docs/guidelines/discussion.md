@@ -8,10 +8,18 @@ Discussion about Manuscript description
 - Markup
 - Extensible: many namespaces on the same document like OAI-PMH or DublinCore namespaces
 
-basic concepts XML
+
+
+Basic concepts XML
+
 - namespace
 - hierarchy
 - elements / attributes
 - metadata standardization: labels and values
 
+
+
+## Exercice
+
+### Reading EAD element
 
