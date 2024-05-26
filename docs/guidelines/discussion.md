@@ -60,10 +60,8 @@ repository : the institution that is in charge of the manuscript
 - reliure / binding
 - conditionnement
 
-- extent (folios, author'name and role, work title, incipit)
+- extent (folios, author'name and role, work title, incipit... )
 - dimensions
-
-
 
 
 > Incipit : Some text that described clearly the content of the work not of the book
@@ -71,4 +69,8 @@ repository : the institution that is in charge of the manuscript
 
 ### 5/ History
 
-### 6/ Additionals ( Bibliography, ... )
+### 6/ Additionals ( Bibliographical references, ... )
+
+- organization responsible for the access
+- access condition
+- 
