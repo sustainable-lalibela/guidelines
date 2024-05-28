@@ -13,36 +13,58 @@ Recording manuscripts in the database
 
 #### Call number
 
-> This call number is given by the Sustainable Lalibela project. SL stands for Sustainable Lalibela, MS for manuscript, Lalibala for a place name, two capital letters for the church, then a sequential number of a manuscript item in the respected church collection.
+> This call number is given by the Sustainable Lalibela project.
 
 - mandatory
-- `SL_MS_Lalibala_{AA}_{000}`
+- `SL_MS_StLalibela_{AAA}_{000}`
+
+Call number parts:
+
+- `SL`: Sustainable Lalibela
+- `MS`: type of the object (here manuscript)
+- `StLalibela`: name of the monastry (Saint Lalibela)
+- `AAA`: 3 letters code of the repository institution (actual location of storage) – TBD
+- `ddd`: 3 digits sequential number
 
 
 !!! example
 
-    SL_MS_Lalibala_MD_001 
+    SL_MS_StLalibela_BGO_018
     
+    SL_MS_StLalibela_MUS_107
+    
+TODO: list 3 letters codes of (10 churches + 2 museums)    
 
 #### Other call numbers
 
-> Other call numbers given outside of the Sustainable Lalibela project.
+> Other (old or new) call numbers given outside of the Sustainable Lalibela project. In the case of an old one, never update it.
+> 
+> If the manuscript is already described in the 2022 inventory of Amhara regional Culture and Tourism Bureau, you **MUST** give the call number of the manuscript in this inventory.
+> 
+> TODO: write the same kind of rule with Ethiopia national inventory identification number.
 
-- optional?
+- optional
 - text
 
+!!! warning
+
+	Create a new field for each different call number (click `+` button), and DON'T write several call numbers in the same field.
+	
 
 !!! example
-
-	B10.IV.1, AM-LL-IV-16, LAL-IV-2002.5, ET-AM-LL-011-IV-001
+	
+	AM-LL-IV-16
+		
+	ET-AM-LL-011-IV-001
+	
 	
 
 #### Title
 
 > Here ‘title’ stands for a generic title / label that can give a hint about the main content of the book. It is a title that is used by the community members to refer to the book orally or in the inventory lists. They are registered according to the following schema: Geez title (written in Latin alphabet) / its English translation. If Clavis BM id (CAe) is available, it is provided as well.
 
-- mandatory
-- enum
+- required
+- single value selection
 
 Values:
 
@@ -121,6 +143,7 @@ Values:
 - Psalms 
 - Prayers 
 
+**TODO: update the list of titles**
 
 
 ### Physical description
@@ -229,6 +252,16 @@ Values:
 
 
 ### Intellectual content
+
+#### (List of) works
+
+TODO!
+
+- Do you want to describe all the works of the manuscript?
+- Are you able to do it?
+- How?
+- What woud be a good form to do it?
+- Do you know good knowledge databases for that specific need?
 
 
 #### Decoration
