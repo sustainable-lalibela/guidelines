@@ -2,21 +2,25 @@ Recording manuscripts in the database
 ===
 
 
-- ArcheoGRID model #38, [`manuscript_general`](https://www-dev.archeogrid.fr/admin/editMetadataModel/pft3d/38) – *Modèle d’enregistrement d’un manuscrit*
-- ArcheoGRID [`Manuscrits`](https://www-dev.archeogrid.fr/project/5128?folder=10590) folder
+The description of a manuscript contains these 5 sections:
+
+1. Identification
+- Physical description
+- Origin and provenance
+- Intellectual content
+- Additional
 
 
-## Elements
 
-### Identification
+## Identification
 
 
-#### Call number
+### Call number
 
-> This call number is given by the Sustainable Lalibela project.
+> The call number given by the Sustainable Lalibela project.
 
-- mandatory
-- `SL_MS_StLalibela_{AAA}_{000}`
+- required
+- pattern: `SL_MS_StLalibela_{AAA}_{000}`
 
 Call number parts:
 
@@ -27,29 +31,51 @@ Call number parts:
 - `ddd`: 3 digits sequential number
 
 
+|Repository institution|3 letters code|
+|----------------------|--------------|
+|Beta Danāgǝl|BDL|
+|Beta Gabrǝʾel|BGL|
+|Beta Giyorgis|BGS|
+|Beta Golgotā|BGA|
+|Beta Libānos|BLS|
+|Beta Madḫāne ʿĀlam|BMA|
+|Beta Mārqorewos|BMS|
+|Beta Māryām|BMM|
+|Beta Masqal|BML|
+|Beta ʾAmānuʾel|BAL|
+|Beta ʿUraʾel|BUL|
+|Lalibela Church Museum|LCM|
+|Lalibela Cultural Center|LCC|
+
+
 !!! example
 
     SL_MS_StLalibela_BGO_018
     
     SL_MS_StLalibela_MUS_107
     
-TODO: list 3 letters codes of (10 churches + 2 museums)    
 
-#### Other call numbers
+
+### Other call numbers
 
 > Other (old or new) call numbers given outside of the Sustainable Lalibela project. In the case of an old one, never update it.
 > 
-> If the manuscript is already described in the 2022 inventory of Amhara regional Culture and Tourism Bureau, you **MUST** give the call number of the manuscript in this inventory.
-> 
-> TODO: write the same kind of rule with Ethiopia national inventory identification number.
+> If the manuscript is already described in the 2022 inventory of Amhara regional Culture and Tourism Bureau, or in the Ethiopia national Inventory, you **MUST** give the call number/identification number of the manuscript in this inventory.
+ 
 
 - optional
 - text
 
+
 !!! warning
 
 	Create a new field for each different call number (click `+` button), and DON'T write several call numbers in the same field.
-	
+
+
+!!! note
+
+	For former call numbers, you may need to add some contextual information, explaining where the old call number comes from –see example below.
+
 
 !!! example
 	
@@ -57,9 +83,10 @@ TODO: list 3 letters codes of (10 churches + 2 museums)
 		
 	ET-AM-LL-011-IV-001
 	
+	EMML-8878 (Ethiopian Microfilm Manuscript Library)
 	
 
-#### Title
+### Title of the manuscript
 
 > Here ‘title’ stands for a generic title / label that can give a hint about the main content of the book. It is a title that is used by the community members to refer to the book orally or in the inventory lists. They are registered according to the following schema: Geez title (written in Latin alphabet) / its English translation. If Clavis BM id (CAe) is available, it is provided as well.
 
@@ -146,15 +173,48 @@ Values:
 **TODO: update the list of titles**
 
 
-### Physical description
+## Physical description
 
 
-#### Writing support
+### Height
+
+> Outer height of the manuscript, i.e. height of cover, if present.  
+
+- required
+- integer (in cm)
+
+
+### Width
+
+> Outer width of the manuscript, i.e. width of cover, if present.  
+
+- required
+- integer (in cm)
+
+
+### Thickness
+
+> Thickness of the manuscript, including the boards, if present.  
+
+- required
+- integer (in cm)
+
+
+### Weight
+
+> The weight of the manuscript.  
+
+- optional
+- integer (in g)
+
+
+### Writing support
 
 > Writing support stands for the material used for writing on it.
 
-- mandatory
-- enum
+- required
+- see [https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msph1sup](https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msph1sup)
+- single value choice
 
 Values:
 
@@ -162,57 +222,58 @@ Values:
 - paper 
 
 
+### Folios numbering
 
-#### Number of folios
+> Continuous numbering of the leaves of the manuscript –without making any difference for protective, opening or closing leaves.
+> 
+> The number of folios reflects a number of folios, 
 
-> The number of folios reflects a number of folios, without making any difference for protective leaves.
-
-- mandatory
+- required
+- see [https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msph1ext](https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msph1ext)
 - integer
 
+!!! Example
 
-#### Height
-
-> Outer height of the manuscript, i.e. height of cover, if present.  
-
-- mandatory
-- integer (in mm)
-
-#### Width
-
-> Outer width of the manuscript, i.e. width of cover, if present.  
-
-- mandatory
-- integer (in mm)
+	TODO
 
 
-#### Thickness
+### Collation
 
-> Thickness of the manuscript, including the boards, if present.  
-
-- mandatory
-- integer (in mm)
-
-
-#### Weight
-
-> The wight of the manuscript.  
+> A description of a book's current and original structure –the arrangement of its leaves and quires.
 
 - optional
-- integer (in g)
+- see [https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msph1col](https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msph1col)
+- text
+
+!!! Example
+
+	4 quires: quires 1 and 2 contain 8 leaves. Quires 3 and 4 contain 6 leaves.
 
 
+### Layout description
 
-#### Bookbinding description
+> A description of the layout of the manuscript, e.g. number of lines, of columns… ????
+
+- optional
+- see [https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msphla](https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msphla)
+- text
+
+!!! Example
+
+	The script has 30 lines, 2 columns but the ruling and pricking are relatively not visible.
+
+
+### Bookbinding description
 
 > General description of the bookbinding that does not require any special codicological competence.
 
-- mandatory
-- enum
+- required
+- single value choice
 
 Values:
 
-- Detached folios 
+- Detached folios
+- Leather binding 
 - Bare binding 
 - Bare wooden boards 
 - Wooden boards covered with leather 
@@ -220,12 +281,20 @@ Values:
 - Wooden boards covered with metal 
 
 
+### Leather case
 
-### Origin and provenance
+> Is the manuscript kept in a leather case? Tick if yes.
 
-#### Provenance
+- optional
+- boolean
 
-> Here ‘provenance’ stands for a church where the book was kept before it entered the Lalibala church museum and became part of museum’s permanent collection.
+
+
+## Origin and provenance
+
+### Provenance
+
+> Here ‘provenance’ stands for a Lalibela church where the manuscript was kept before it entered in its actual repository institution (e.g. a museum or a church).
 
 - optional
 - enum
@@ -247,46 +316,105 @@ Values:
 
 !!! note
 
-	If the church you are looking for does not figure in the list, contact the curator of the project to create one. 
+	If the provenance place you are looking for does not figure in the list, contact the curator of the project to create one. 
+
+
+### History
+
+> A free description (using prose paragraphs) of the full history of the manuscript: e.g. history of the manuscript's transmission and acquisitions.
+
+> Any information concerning the origin of the manuscript (or its parts), and concerning the process by which the manuscript entered the repository institution.
+
+- optional
+- see [https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mshy](https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mshy)
+- text
+
+!!! example
+	
+	TODO
 
 
 
-### Intellectual content
+## Intellectual content
 
-#### (List of) works
+### Languages
 
-TODO!
+> Language identification of the content of the manuscript.
 
-- Do you want to describe all the works of the manuscript?
-- Are you able to do it?
-- How?
-- What woud be a good form to do it?
-- Do you know good knowledge databases for that specific need?
+- required
+- multiple values choices
+
+Values ([ISO_639-2](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)):
+
+- `amh`: Amharic
+- `ara`: Arabic
+- `eng`: English
+- `gez`: Geʽez
+- `heb`: Hebrew
 
 
-#### Decoration
+### Manuscript content
 
-> Here ‘decoration’ stands for any decorative element inside the book that falls into one of the four categories ( harag / drawing / painting / none).
+> A general description of the content of the manuscript – using informal prose paragraphs. 
 
-- mandatory
-- enum
+- optional
+- see [https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-msContents.html](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-msContents.html)
+- text
+
+!!! example
+	
+	TODO
+
+### Manuscript item(s)
+
+> Description of an individual work within the intellectual content of the manuscript.
+
+
+- optional
+- see [https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-msItem.html](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-msItem.html)
+- text
+
+
+!!! note
+
+	You are supposed to be able to give a title or an author to each Manuscript item.
+	
+
+!!! warning
+
+	Create a new item for each different work (click `+` button), and DON'T describe several works in the same `Manuscript item` field.
+
+
+!!! example
+	
+	TODO
+
+
+
+### Decoration
+
+> Here ‘decoration’ stands for any decorative element inside the manuscript that falls into one of the four categories ( ḥarag / drawing / painting / none).
+
+- required
+- multiple values choice
 
 Values:
 
-- ḥarag 
-- drawing 
-- painting 
-- none 
+- ḥarag
+- drawing
+- painting
+- none –if no decoration
 
 
-### Additional
+## Additional
 
-#### Conservation status
+
+### Conservation status
 
 > Here ‘conservation status’ stands for a general state of the book. If nothing is damaged, conservation status is good. If the binding is damaged, conservation status is bad. If the binding is not damaged, but there are other problems, although the book can be still used for reading without any risk, its conservation status is ‘medium’.
 
-- mandatory
-- enum
+- required
+- single value choice
 
 Values:
 
@@ -295,9 +423,12 @@ Values:
 - bad 
 
 
-#### EMML/HMML Reproductions
+### EMML/HMML Reproductions
 
-> Microfilming or digitazation projects that took place before the Sustainable Lalibela project initiative.
+> Already existing digitization made during the EMML or the HMML projects
+> 
+> - EMML: Ethiopian Manuscript Microfilm Library
+> - HMML: Hills Museum Manuscript Library
 
 - optional
 - text
@@ -305,134 +436,47 @@ Values:
 
 !!! example
 	
-	TODO
-
-#### Notes
-
-> ???
-
-- optional
-- text
+	Digitization available in HMML, under call number…
 
 
+### Repository
 
-## Previous Model, for discussion
-
-### Identification > `TITLE`
-
-> A generic title / label that can give a hint about the main content of the book. It is a title that is used by the community members to refer to the book orally or in the inventory lists. Here you have many options of such titles, choose the right one(s). Note that if the title you are looking for does not figure in the list, choose the variant “unidentified”.
-
+> The institution where the manuscript is stored.
 
 !!! note
 
-	Geez title (written in Latin alphabet) / its English translation / ref. Clavis BM (CAe)
+    `Respository` is different from `Provenance`: the repository is the place where the manuscript is stored. For instance, the repository of a manuscript whose provenance is Beta Māryām can be Lalibela Church Museum.
 
-!!! warning
+- required
+- see [https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-repository.html](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-repository.html)
+- single value choice
 
-	We don't have that information anymore. Different definition than actual `title` (historical information). Identification / Intellectual content
+Values:
 
-
-### Identification > `PROVENANCE`
-
-> Place of preservation of the book. Choose the name of the church in the thesaurus.
-
-!!! warning
-
-	We don't have that information anymore. Different definition than actual `provenace` (historical information)
-
-
-### Identification > `VERIFIED CURRENT LOCATION`
-
-> ?
-
-!!! warning
-
-	Préciser la différence entre `PROVENANCE` et `VERIFIED CURRENT LOCATION`
+- Beta Danāgǝl
+- Beta Gabrǝʾel
+- Beta Giyorgis
+- Beta Golgotā
+- Beta Libānos
+- Beta Madḫāne ʿĀlam
+- Beta Mārqorewos
+- Beta Māryām
+- Beta Masqal
+- Beta ʾAmānuʾel
+- Beta ʿUraʾel
+- Lalibela Church Museum
+- Lalibela Cultural Center
 
 
+### Ownership
 
-### PhysDesc > `SCRIBE`
-
-> Under ‘scribe(s)’ we understand a person who is explicitly named in the text as a scribe. Sometimes you have more than one scribe mentioned, sometimes you do not have any. 
-
-
-!!! example "Scribe notice example"
-
-    TODO
+> The owner (institution) of the manuscript. TBD
 
 
-### Origin > `DATE`
+### Comments
 
-> of what?
+For free notes, it is possible to use ArcheoGRID comments: on the object card, click on `Comment` button.
 
-!!! warning
-
-	No mention of (creation) date in the actual model
-
-
-### Origin > `COMISSIONER - PATRON`
-
-> A person who is named in the text and can be interpreted as a commissioner. Sometimes the text mentions a commissioner with his / her entire family, sometimes it does not mention anyone.
-
-
-
-### Content > `CONTENT`
-
-> A description of all meaningful elements inside the book. Unless you have a pre-prepared description of the content, leave this window empty.
-- ?
-
-!!! warning
-
-    No description of the intellectual content in the actual model
-
-
-
-### Additional > `Notes d'archives`
-
-> ?
-
-
-## Old ideas to discuss
-
-
-### PERIOD OF PRODUCTION BASED ON WRITING
-
-> Under ‘period of production’ we understand a period to which the writing can be dated based on palaeographical analysis. 
-
-pre-1350; 1350-1450; 1450-1550; 1550-1650; 1650-1750; 1650-1850; 1850-1900; 2000-
-
-
-### DATATION
-
-> Under ‘datation’ we understand a reference to a specific date or mention of a historical figure which inform the date of the production of the book.
-
-- Yes /no
-- commissionner
-- chronologie absolue (calendrier grégorien)
-
-
-### COLOPHON
-
-> Under a ‘colophon’ we understand a note giving some information about the production.
-
--	YES / NO
--	Texte
-
-Please leave this window empty.
-
-
-### ADDITIONAL NOTES
-
-> Under ‘archival notes’ we understand all notes that are different from the main content and as such, additional to the main content. Here you have only two options, if there are such additional notes, you answer ‘yes’, if there are no such notes, you answer ‘no’. In case of doubt, please contact the curator of the project
-
-
-### NOTES
-
-> Here you have an option to note something important about the book, particularly you can shortly specify something what you could not specify concerning the decoration / additional notes or conservation status. Something that might serve as a sign for further users. Note that you do not need to write anything that comes from a ‘general knowledge’, something that is not strictly related to this particular manuscript. If you have nothing to add, leave this window empty. 
-
-### Bibliography 
-
-> To be discussed
 
 
 ## Appendix
@@ -440,3 +484,10 @@ Please leave this window empty.
 - [TEI Manuscript Description module documentation](https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html)
 - [Beta maṣāḥǝft TEI Guidelines](https://betamasaheft.eu/Guidelines/)
 - [BnF Manual for cataloguing medieval manuscripts](https://kitcat.bnf.fr/consignes-catalogage/manuel-de-catalogage-des-manuscrits-medievaux)
+
+
+TDB:
+
+- Datation: under ‘datation’ we understand a reference to a specific date or mention of a historical figure which inform the date of the production of the book.
+- Scribe(s): under ‘scribe(s)’ we understand a person who is explicitly named in the text as a scribe. Sometimes you have more than one scribe mentioned, sometimes you do not have any. 
+- Comissioner _ Patron: A person who is named in the text and can be interpreted as a commissioner. Sometimes the text mentions a commissioner with his / her entire family, sometimes it does not mention anyone.
