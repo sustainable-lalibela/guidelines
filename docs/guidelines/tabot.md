@@ -1,17 +1,28 @@
-Recording tabots in the database
+Describing a Manbara Tabot in ArcheoGRID
 ===
 
+!!! warning "DRAFT version (2024-05-31)"
+	
+	This page documents a proposal of a Manbara Tabot description template we developed using Claire Bosc-Tiessé paper.
+	
+	**We'll have to harmonize this template with the one we've designed for the manuscripts.**
+	
+	DRAFT TO BE DISCUSSED!
 
-- ArcheoGRID model #46	[Object (type tabot) recording model](https://www-dev.archeogrid.fr/edit,pft3d,manuscript_general,object,9098,11565), développé à partir d'un article écrit par Claire Bosc-Tiessé.
+
+The description of a manuscript contains these 5 sections:
+
+1. Identification
+- Physical description
+- Intellectual content
+- Origin and provenance
+- Additional
 
 
-## Elements
+## Identification
 
 
-### Identification
-
-
-#### Call number
+### Call number
 
 > This call number is provided by the Sustainable Lalibela project. 'SL' stands for Sustainable Lalibela, 'ManbaraT' for Manbara Tābot, 'Lalibala' for the place name, followed by two or three capital letters representing the church, 'Museum' for the church museum, and then a sequential number assigned to an item in the respective church or museum collection.collection.
 
@@ -24,7 +35,7 @@ Recording tabots in the database
 	SL_ManbaraT_Lalibala_MD_001
 
 
-#### Other call numbers
+### Other call numbers
 
 > Other call numbers given outside of the Sustainable Lalibela project.
 
@@ -36,7 +47,7 @@ Recording tabots in the database
 	BMA 01, B.V.24, LMA 2, Mädhäné Alam 2, PA 054610, PA 054612, PA 054614.
 
 
-#### Current place of preservation
+### Current place of preservation
 
 > Church or museum that has been guarding the object at the moment of description.
 
@@ -58,9 +69,9 @@ Values:
 - Beta Danāgǝl
 
 
-### Physical description
+## Physical description
 
-#### Material
+### Material
 
 > Material refers to all visible types of materials used in creating the object's current appearance.
 
@@ -74,7 +85,7 @@ Values:
 - Leather for covering legs 
 
 
-#### Technique
+### Technique
 
 > Technique here refers to the method of distinguishing between carving the entire object from a single piece (monoxyle) and assembling several pieces into one object (assembled).
 
@@ -87,7 +98,7 @@ Values:
 - assembled 
 
 
-#### Shape of the object
+### Shape of the object
 
 > The shape of the object refers to distinguishing between its square and cruciform shape.
 
@@ -100,7 +111,7 @@ Values:
 - Cruciform 
 
 
-#### Number of openings
+### Number of openings
 
 > The term 'opening(s)' refers to one or two openings located on one or two sides of the object, leading to its inner part.
 
@@ -117,7 +128,7 @@ Values:
 - On the undefined side 
 
 
-#### Carving technique
+### Carving technique
 
 > The carving technique here refers to distinguishing semi-flat relief carving from other methods.
 
@@ -130,14 +141,15 @@ Values:
 - Other 
 
 
-#### Known dimensions
+### Known dimensions
 
 > If measured at all, the objects are measured as if they were square, regardless of their actual shape.
 
 - mandatory
 - boolean (Yes/No)
 
-#### Total height (in mm)
+
+### Total height (in mm)
 
 > **If known**. TBD
 
@@ -145,7 +157,7 @@ Values:
 - integer (in mm)
 
 
-#### Width (in mm), if known 
+### Width (in mm), if known 
 
 > **If known**. TBD
 
@@ -153,7 +165,7 @@ Values:
 - integer (in mm)
 
 
-#### Length (in mm), if known 
+### Length (in mm), if known 
 
 > **If known**. TBD
 
@@ -161,7 +173,7 @@ Values:
 - integer (in mm)
 
 
-#### Height of the legs (in mm), if known 
+### Height of the legs (in mm), if known 
 
 > **If known**. TBD
 
@@ -169,7 +181,7 @@ Values:
 - integer (in mm)
 
 
-#### Height of the box (in mm), if known 
+### Height of the box (in mm), if known 
 
 > **If known**. TBD
 
@@ -178,10 +190,10 @@ Values:
 
 
 
-### Intellectual content
+## Intellectual content
 
 
-#### Ornamental patterns
+### Ornamental patterns
 
 > If ornamental patterns are present, they are described here in generic groups such as 'cross', 'manbara tābot', 'arches', 'vegetal motifs', 'geometric motifs', or 'other' if none of the listed groups applies.
 
@@ -199,7 +211,7 @@ Values:
 - None
 
 
-#### Location of the ornamental patterns
+### Location of the ornamental patterns
 
 > **If present**. If ornamental patterns are present, they are described above by generic groups such as 'cross', 'manbara tābot', 'arches', 'vegetal motifs', 'geometric motifs', or 'other' if none of the listed groups applies. This level of description includes the location where these ornamental patterns are observed. If there is only one opening, its side is considered to be oriented to the east, and the orientation of the other sides is defined accordingly. If there are two openings, sides’ orientation remains undefined.
 
@@ -217,7 +229,7 @@ Values:
 - On the legs 
 
 
-#### Figures
+### Figures
 
 > Here 'figures' refer to human or human-like representations, with explicit naming of Jesus Christ and Mary, while saints or angels are grouped together. If identification is uncertain, the figure is classified as 'unknown'.
 
@@ -234,7 +246,7 @@ Values:
 - None 
 
 
-#### Location of figures
+### Location of figures
 
 > **If present**. This level of description includes the location where the figure(s) are observed. If there is only one opening, its side is considered to be oriented to the east, and the orientation of the other sides is defined accordingly. If there are two openings, sides’ orientation remains undefined.
 
@@ -251,7 +263,7 @@ Values:
 - On the undefined side 
 
 
-#### Location of the inscription
+### Location of the inscription
 
 > **If present**. Inscription refers to carved characters. If present, they may be found on the box and/ or legs.
 
@@ -264,7 +276,7 @@ Values:
 - Legs 
 
 
-#### Transcription of the inscription
+### Transcription of the inscription
 
 > **If present**. 
 
@@ -276,7 +288,7 @@ Values:
 	አነ፡ ላሊባላ፡ ንጉሥ፡ በስሞሙ፡ ለ፳፡ ወ ፬ ካህናተ፡ ሰማይ፡ ከመ፡ ይስአሉ፡ ኀበ፡ እግዚአብሔር[፡] [ከ]መ፡ ይስረይ፡ ኀጢአት26[፡] ወጌጋይየ[፡] አሜን[፡] ወአሜን[፡]
 
 
-#### Dedication
+### Dedication
 
 > TBD
 
@@ -302,10 +314,10 @@ Values:
 
 
 
-### Origin and provenance
+## Origin and provenance
 
 
-#### Provenance
+### Provenance
 
 > Church(es) where the object was kept before it was placed in its current location for preservation.
 
@@ -326,9 +338,9 @@ Values:
 - Beta Libānos 
 
 
-### Additional
+## Additional
 
-#### Conservation status
+### Conservation status
 
 > The conservation status is described here using four categories: intact, partially burnt, partially broken, and repaired. A single object can have up to three categories applicable to it (e.g., partially burnt, partially broken, and repaired).
 
@@ -344,7 +356,7 @@ Values:
 - Partially damaged 
 
 
-#### Affected part
+### Affected part
 
 > **If damaged**. The conservation status is described above using four categories: intact, partially burnt, partially broken, and repaired. A single object can have up to three categories applicable to it (e.g., partially burnt, partially broken, and repaired). This level of description includes the location where the damage(s) are observed. If there is only one opening, its side is considered to be oriented to the east, and the orientation of the other sides is defined accordingly. If there are two openings, sides’ orientation remains undefined.
 
@@ -364,7 +376,7 @@ Values:
 - Side corner(s) 
 - Undefined 
 
-#### EMML/HMML Reproductions
+### EMML/HMML Reproductions
 
 > Microfilming or digitazation projects that took place before the Sustainable Lalibela project initiative.
 
@@ -377,7 +389,7 @@ Values:
 	TODO
 
 
-#### Notes
+### Notes
 
 > TBD
 
@@ -389,7 +401,7 @@ Values:
 	TODO
 
 
-#### Bibliography
+### Bibliography
 
 > TBD
 
@@ -399,14 +411,4 @@ Values:
 !!! example
 
 	Bosc-Tiessé, C. 2010. ‘Catalogue des autels et meubles d’autel en bois (tābot et manbara tābot) des églises de Lālibalā: Jalons pour une histoire des objets et des motifs’, Annales d’Éthiopie, 25 (2010), 60-61.
-
-
-
-
-
-
-
-
-
-
 

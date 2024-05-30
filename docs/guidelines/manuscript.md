@@ -1,5 +1,11 @@
-Recording manuscripts in the database
+Describing a manuscript in ArcheoGRID
 ===
+
+!!! warning "Draft version 2024-05-31"
+	
+	This page documents the manuscript description template we developed during the training course.
+	
+	DRAFT TO BE VALIDATED
 
 
 The description of a manuscript contains these 5 sections:
@@ -486,7 +492,7 @@ For free notes, it is possible to use ArcheoGRID comments: on the object card, c
 - [BnF Manual for cataloguing medieval manuscripts](https://kitcat.bnf.fr/consignes-catalogage/manuel-de-catalogage-des-manuscrits-medievaux)
 
 
-TDB:
+TBD:
 
 - Datation: under ‘datation’ we understand a reference to a specific date or mention of a historical figure which inform the date of the production of the book.
 - Scribe(s): under ‘scribe(s)’ we understand a person who is explicitly named in the text as a scribe. Sometimes you have more than one scribe mentioned, sometimes you do not have any. 
