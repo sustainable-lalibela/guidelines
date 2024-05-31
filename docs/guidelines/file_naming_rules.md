@@ -95,7 +95,7 @@ For instance, what will be the name of:
 	
 	Where:
 	
-	- `{object_name}` is the name of the object (e.g. `SL_MS_StLalibela_LCM_035_0146`).
+	- `{object_name}` is the name of the object (e.g. `SL_MS_StLalibela_LCM_035`).
 	- `{000}` is the numbering of the resource (e.g. `0146`).
 	- `{extension}` is the file extension describing the format of the resource (e.g. `tif`).
 	

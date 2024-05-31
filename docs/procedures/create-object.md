@@ -15,8 +15,8 @@ I need:
 
     Sustainable Lalibela Project
     
-    - Group 3. Mikiyas (speaker), Fisseha, Zelalem, Mengistie
-	
+    - Group 3. Mikiyas (speaker), Fiseha, Zelalem, Mengistie
+	e
 	**DRAFT. To be completed with screenshots.**
 
 

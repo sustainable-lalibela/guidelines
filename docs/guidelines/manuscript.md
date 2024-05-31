@@ -317,7 +317,8 @@ Values:
 - Beta Māryām 
 - Beta Masqal 
 - Beta ʾAmānuʾel 
-- Beta ʿUraʾel 
+- Beta ʿUraʾel
+- Somewhere else
 
 
 !!! note
@@ -337,7 +338,10 @@ Values:
 
 !!! example
 	
-	TODO
+	The codex is given for Bete Medhane Alem church by abune Nob
+
+
+    When the church museum established at 2008 it brought from Bete Aba Libanos church to the church Museum(the repository).
 
 
 
@@ -369,7 +373,7 @@ Values ([ISO_639-2](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)):
 
 !!! example
 	
-	TODO
+	ff.1r- 120r is containing about Dāwit / Psalter but ff.120v contains about Wǝddāse Māryām
 
 ### Manuscript item(s)
 

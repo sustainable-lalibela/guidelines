@@ -44,8 +44,8 @@ In the Lalibela server, copy data on project folders, in the resources folder on
 - Select Branch "Collaborative 3D projects". This is allways this branch to select
 - Select project "Lalibela_eglises_rupestres" and Validate
 
-- if the date to synchronize are data of a manuscript, then synchronize the folder : LALIBELA_eglises_rupestres/Resources/Manuscripts
-- if the date to synchronize are data of a Vestiments, then synchronize the folder : LALIBELA_eglises_rupestres/Resources/Vestiments
+- if the data to synchronize are data of a manuscript, then synchronize the folder : LALIBELA_eglises_rupestres/Resources/Manuscripts
+- if the data to synchronize are data of a Vestiments, then synchronize the folder : LALIBELA_eglises_rupestres/Resources/Vestiments
 
 
 To synchronize the folder :
